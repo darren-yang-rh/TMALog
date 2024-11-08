@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>findoutline.png</file>
+        <file>find.png</file>
+        <file>eyeoutline.png</file>
+        <file>eye.png</file>
+        <file>command.png</file>
+        <file>Protocol.png</file>
+        <file>config.png</file>
+        <file>Eraser.png</file>
+        <file>regular.png</file>
+        <file>note.png</file>
+        <file>clear.png</file>
+        <file>close.png</file>
+        <file>savenote.png</file>
+        <file>DU log.png</file>
+    </qresource>
+</RCC>

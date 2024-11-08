@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1225</width>
+    <height>605</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1225</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpen_File">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose_Current"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuTool_Box">
+    <property name="title">
+     <string>Tool Box</string>
+    </property>
+    <widget class="QMenu" name="menuL23_Protocol">
+     <property name="title">
+      <string>VIAVI L23 Protocol(Regular Expression)</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/img/Protocol.png</normalon>
+      </iconset>
+     </property>
+     <addaction name="actionRegister"/>
+     <addaction name="actionNAS_all"/>
+     <addaction name="actionNAS_only"/>
+     <addaction name="actionEMM_all"/>
+    </widget>
+    <widget class="QMenu" name="menuTMA_Command_log">
+     <property name="title">
+      <string>VIAVI Command log(Regular Expression)</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/img/command.png</normalon>
+      </iconset>
+     </property>
+     <addaction name="actionDefault_Parse"/>
+     <addaction name="actionCell_info"/>
+     <addaction name="actionRSRP"/>
+     <addaction name="actionForw_command"/>
+     <addaction name="actionFrequency"/>
+    </widget>
+    <widget class="QMenu" name="menuDU_log">
+     <property name="title">
+      <string>Rasdisys 5G DU log</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/img/DU log.png</normalon>
+      </iconset>
+     </property>
+     <addaction name="actionTRC_DU_CU"/>
+    </widget>
+    <widget class="QMenu" name="menu4G_LTE_log">
+     <property name="title">
+      <string>Radisys 4G eNoteb log</string>
+     </property>
+     <property name="icon">
+      <iconset resource="QtRe.qrc">
+       <normaloff>:/img/config.png</normaloff>:/img/config.png</iconset>
+     </property>
+     <addaction name="actionRRC"/>
+     <addaction name="actionOTA"/>
+     <addaction name="actionRRM"/>
+     <addaction name="actionRRC_Src"/>
+     <addaction name="actionINFO"/>
+     <addaction name="actionS1AP"/>
+    </widget>
+    <addaction name="menuL23_Protocol"/>
+    <addaction name="menu4G_LTE_log"/>
+    <addaction name="menuTMA_Command_log"/>
+    <addaction name="menuDU_log"/>
+    <addaction name="action_Re"/>
+    <addaction name="actionSearch"/>
+    <addaction name="actionChartMouse"/>
+    <addaction name="actionGoto_Line_Ctrl_G"/>
+   </widget>
+   <widget class="QMenu" name="menuinfo">
+    <property name="title">
+     <string>info</string>
+    </property>
+    <addaction name="actionEdit_XML"/>
+    <addaction name="actionabout"/>
+   </widget>
+   <widget class="QMenu" name="menuNote">
+    <property name="title">
+     <string>Note</string>
+    </property>
+    <addaction name="actionEraser"/>
+    <addaction name="actionSave_Note"/>
+    <addaction name="actionSave_Note_text"/>
+   </widget>
+   <addaction name="menuOpen_File"/>
+   <addaction name="menuTool_Box"/>
+   <addaction name="menuNote"/>
+   <addaction name="menuinfo"/>
+  </widget>
+  <action name="action_Re">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/regular.png</normaloff>:/img/regular.png</iconset>
+   </property>
+   <property name="text">
+    <string>Regular Expression</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normalon>:/img/eye.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionRegister">
+   <property name="text">
+    <string>Register</string>
+   </property>
+  </action>
+  <action name="actionNAS_all">
+   <property name="text">
+    <string>NAS all</string>
+   </property>
+  </action>
+  <action name="actionDefault_Parse">
+   <property name="text">
+    <string>Default Parse</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionabout">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/find.png</normaloff>:/img/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSearch">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/find.png</normaloff>:/img/find.png</iconset>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+  </action>
+  <action name="actionNAS_only">
+   <property name="text">
+    <string>NAS only</string>
+   </property>
+  </action>
+  <action name="actionCell_info">
+   <property name="text">
+    <string>Cell ,L1 ,L2 ,Cause</string>
+   </property>
+  </action>
+  <action name="actionRSRP">
+   <property name="text">
+    <string>RSRP , Freq , RSSI</string>
+   </property>
+  </action>
+  <action name="actionForw_command">
+   <property name="text">
+    <string>Forw  command</string>
+   </property>
+  </action>
+  <action name="actionFrequency">
+   <property name="text">
+    <string>Frequency</string>
+   </property>
+  </action>
+  <action name="actionEraser">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/Eraser.png</normaloff>:/img/Eraser.png</iconset>
+   </property>
+   <property name="text">
+    <string>Eraser</string>
+   </property>
+  </action>
+  <action name="actionSave_Note">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/savenote.png</normaloff>:/img/savenote.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Note(HTML)</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/close.png</normaloff>:/img/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close  APP</string>
+   </property>
+  </action>
+  <action name="actionTRC_DU_CU">
+   <property name="text">
+    <string>TRC DU&lt;--&gt;CU </string>
+   </property>
+  </action>
+  <action name="actionEdit_XML">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/config.png</normaloff>:/img/config.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Config</string>
+   </property>
+  </action>
+  <action name="actionClose_Current">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/clear.png</normaloff>:/img/clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close Current</string>
+   </property>
+  </action>
+  <action name="actionChartMouse">
+   <property name="text">
+    <string>ChartMouse</string>
+   </property>
+  </action>
+  <action name="actionRRC">
+   <property name="text">
+    <string>RRC RRM Src</string>
+   </property>
+  </action>
+  <action name="actionOTA">
+   <property name="text">
+    <string>OTA</string>
+   </property>
+  </action>
+  <action name="actionRRM">
+   <property name="text">
+    <string>RRM</string>
+   </property>
+  </action>
+  <action name="actionRRC_Src">
+   <property name="text">
+    <string>CQI RSRP</string>
+   </property>
+  </action>
+  <action name="actionINFO">
+   <property name="text">
+    <string>INFO CRNTI</string>
+   </property>
+  </action>
+  <action name="actionS1AP">
+   <property name="text">
+    <string>S1AP</string>
+   </property>
+  </action>
+  <action name="actionGoto_Line_Ctrl_G">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/regular.png</normaloff>:/img/regular.png</iconset>
+   </property>
+   <property name="text">
+    <string>Goto Line (Ctrl_G)</string>
+   </property>
+  </action>
+  <action name="actionSave_Note_text">
+   <property name="icon">
+    <iconset resource="QtRe.qrc">
+     <normaloff>:/img/note.png</normaloff>:/img/note.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save Note(TEXT)</string>
+   </property>
+  </action>
+  <action name="actionEMM_all">
+   <property name="text">
+    <string>EMM all</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="QtRe.qrc"/>
+ </resources>
+ <connections/>
+</ui>

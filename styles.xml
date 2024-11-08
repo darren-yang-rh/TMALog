@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<styles>
+    <pattern>
+        <regex><![CDATA[(\d{2}:\d{2}:\d{2}:\d{3}|\d{2}/\d{2}/\d{4} \d{2}:\d{2}:\d{2}\.\d{6}|Error|Failure|ERROR|FAILURE|FAILED)]]></regex>
+        <color>#FF0000</color>
+    </pattern>
+    <pattern>
+        <regex><![CDATA[(_STATE:.*$|CMPI.*|message c1 :.*:|REGISTERED.*)]]></regex>
+        <color>#FF00FF</color>
+    </pattern>
+    <pattern>
+        <regex><![CDATA[(PCO_.+|forw mte.*|SETP.*)]]></regex>
+        <color>#0000FF</color>
+    </pattern>
+</styles>
